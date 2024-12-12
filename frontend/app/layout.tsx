@@ -1,8 +1,11 @@
-import './globals.css';
+// app/layout.tsx
+import '../styles/globals.css';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "A portfolio built with Next.js and Tailwind CSS",
+  title: 'My Portfolio',
+  description: 'A portfolio built with Next.js and Tailwind CSS',
 };
 
 export default function RootLayout({
@@ -13,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* Add Header and Footer here if needed */}
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

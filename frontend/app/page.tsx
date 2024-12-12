@@ -1,7 +1,16 @@
+// app/page.tsx
+import Home from '../components/Home';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
+
 export default function HomePage() {
   return (
-    <main className="flex items-center justify-center h-screen">
-      <h1 className="text-5xl font-bold">Welcome to My Portfolio!</h1>
-    </main>
+    <div>
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
   );
 }

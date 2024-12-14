@@ -57,13 +57,13 @@ export default function Home() {
         {/* Middle Section for Text */}
         <div className="space-y-6 text-center md:text-left max-w-3xl px-4 md:px-0 mt-8 md:mt-0">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
-            <span className="text-indigo-500">Hi,</span> I'm Eyobed Abreham
+            <span className="text-indigo-500">Hi,</span> I&apos;m Eyobed Abreham
           </h1>
           <p className="text-lg md:text-xl text-gray-300">
             Web Developer | Aspiring ML Engineer
           </p>
           <p className="text-sm md:text-base text-gray-400">
-            I'm passionate about crafting scalable, responsive web applications and I'm eager to apply machine learning techniques in real-world projects to solve challenging problems.
+            I&apos;m passionate about crafting scalable, responsive web applications and I&apos;m eager to apply machine learning techniques in real-world projects to solve challenging problems.
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
             <a 

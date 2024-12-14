@@ -28,7 +28,7 @@ export default function Projects() {
             <div className="mt-4">
               <h3 className="text-2xl font-semibold text-indigo-500">Project 1</h3>
               <p className="text-gray-300 mt-2">
-                A brief description of what this project is about. It could be a web app, a mobile app, or anything you've built.
+                A brief description of what this project is about. It could be a web app, a mobile app, or anything you&apos;ve built.
               </p>
               <div className="mt-4 space-x-4">
                 <a

@@ -53,31 +53,31 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white font-inter"
+      className="py-12 bg-gradient-to-br from-gray-900 to-gray-800 text-white font-inter"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
           About Me
         </h2>
 
         {/* Description */}
         <div className="space-y-6">
-          <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
-            <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+          <div className="bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg">
+            <p className="text-base sm:text-lg text-gray-300 mb-4 leading-relaxed">
               Hey there! I'm Eyobed Abreham, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
               From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I'm not coding, you'll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
             </p>
           </div>
 
           {/* Skills Showcase */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-200 mb-6 text-center">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-200 mb-6 text-center">
               Technologies I Work With
             </h3>
             <motion.div
-              className="flex flex-nowrap justify-center gap-4 overflow-hidden"
+              className="flex flex-wrap justify-center gap-4 sm:gap-6 overflow-hidden"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -88,7 +88,7 @@ export default function About() {
                   key={index}
                   variants={itemVariants}
                   className={`
-                    group w-16 h-16 rounded-full border-2 border-gray-700 
+                    group w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-gray-700 
                     flex items-center justify-center transition-all duration-300
                     hover:border-4 ${skill.borderColor}
                     hover:shadow-2xl hover:scale-110 cursor-pointer
@@ -100,7 +100,7 @@ export default function About() {
                       ${skill.color} transition-transform duration-300 
                       group-hover:scale-125 group-hover:rotate-12
                     `}
-                    size={32}
+                    size={24}
                   />
                 </motion.div>
               ))}

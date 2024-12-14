@@ -17,3 +17,16 @@ body {
   background-color: #f9f9f9;
   scroll-behavior: smooth; /* Enables smooth scrolling */
 }
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-right {
+  animation: slideRight 20s linear infinite;
+}

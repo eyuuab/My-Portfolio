@@ -1,65 +1,110 @@
-import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
-import { SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiTensorflow } from 'react-icons/si';
+'use client';
+import { motion } from 'framer-motion';
+import {
+  SiNextdotjs,
+  SiVite,
+  SiJavascript,
+  SiReact,
+  SiMongodb,
+  SiTailwindcss,
+  SiTypescript,
+  SiTensorflow,
+  SiPytorch,
+  SiDocker,
+} from "react-icons/si";
 
 export default function About() {
+  const skills = [
+    { Icon: SiNextdotjs, color: "text-gray-100", borderColor: "hover:border-gray-300" },
+    { Icon: SiVite, color: "text-purple-400", borderColor: "hover:border-purple-400" },
+    { Icon: SiReact, color: "text-cyan-400", borderColor: "hover:border-cyan-400" },
+    { Icon: SiJavascript, color: "text-yellow-500", borderColor: "hover:border-yellow-500" },
+    { Icon: SiMongodb, color: "text-green-500", borderColor: "hover:border-green-500" },
+    { Icon: SiTailwindcss, color: "text-teal-400", borderColor: "hover:border-teal-400" },
+    { Icon: SiTypescript, color: "text-blue-600", borderColor: "hover:border-blue-600" },
+    { Icon: SiTensorflow, color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
+    { Icon: SiPytorch, color: "text-orange-400", borderColor: "hover:border-orange-400" },
+    { Icon: SiDocker, color: "text-blue-400", borderColor: "hover:border-blue-400" },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+
   return (
     <section
       id="about"
-      className="py-16 bg-gray-800 text-white"
+      className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white font-inter"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center mb-8">About Me</h2>
+        <h2 className="text-4xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
+          About Me
+        </h2>
 
-        <div className="md:flex md:space-x-12">
-          {/* Left Section - Image or Avatar */}
-          <div className="flex justify-center md:w-1/3 mb-8 md:mb-0">
-            <img 
-              src="https://via.placeholder.com/200" // Replace with your image URL
-              alt="Eyobed Abreham"
-              className="w-48 h-48 rounded-full object-cover"
-            />
+        {/* Description */}
+        <div className="space-y-6">
+          <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+              Hey there! I'm Eyobed Abreham, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I'm not coding, you'll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
+            </p>
           </div>
 
-          {/* Right Section - Text Description */}
-          <div className="md:w-2/3 space-y-6">
-            <p className="text-lg md:text-xl text-gray-300">
-              Hi! I'm Eyobed Abreham, a passionate web developer with a strong interest in machine learning. I enjoy creating beautiful, responsive web applications that provide real-world solutions.
-            </p>
-
-            <p className="text-lg md:text-xl text-gray-300">
-              I have experience with frontend and backend technologies, and I am always looking for new challenges that allow me to grow as a developer. When I'm not coding, I love learning about the latest developments in the tech world and working on personal projects to improve my skills.
-            </p>
-
-            {/* Skills Section */}
-            <div className="mt-8">
-              <h3 className="text-2xl font-semibold text-gray-200">My Skills</h3>
-              <ul className="mt-4 grid grid-cols-2 gap-4 text-gray-400">
-                <li className="flex items-center">
-                  <FaReact className="mr-2 text-blue-400" size={20} /> React.js
-                </li>
-                <li className="flex items-center">
-                  <FaNodeJs className="mr-2 text-green-400" size={20} /> Node.js
-                </li>
-                <li className="flex items-center">
-                  <SiExpress className="mr-2 text-gray-300" size={20} /> Express.js
-                </li>
-                <li className="flex items-center">
-                  <SiTensorflow className="mr-2 text-yellow-400" size={20} /> Machine Learning
-                </li>
-                <li className="flex items-center">
-                  <FaPython className="mr-2 text-blue-300" size={20} /> Python
-                </li>
-                <li className="flex items-center">
-                  <SiTypescript className="mr-2 text-blue-500" size={20} /> TypeScript
-                </li>
-                <li className="flex items-center">
-                  <SiMongodb className="mr-2 text-green-500" size={20} /> MongoDB
-                </li>
-                <li className="flex items-center">
-                  <SiTailwindcss className="mr-2 text-teal-400" size={20} /> Tailwind CSS
-                </li>
-              </ul>
-            </div>
+          {/* Skills Showcase */}
+          <div className="mt-8">
+            <h3 className="text-2xl font-semibold text-gray-200 mb-6 text-center">
+              Technologies I Work With
+            </h3>
+            <motion.div
+              className="flex flex-nowrap justify-center gap-4 overflow-hidden"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className={`
+                    group w-16 h-16 rounded-full border-2 border-gray-700 
+                    flex items-center justify-center transition-all duration-300
+                    hover:border-4 ${skill.borderColor}
+                    hover:shadow-2xl hover:scale-110 cursor-pointer
+                    bg-gray-800/50 backdrop-blur-sm
+                  `}
+                >
+                  <skill.Icon
+                    className={`
+                      ${skill.color} transition-transform duration-300 
+                      group-hover:scale-125 group-hover:rotate-12
+                    `}
+                    size={32}
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

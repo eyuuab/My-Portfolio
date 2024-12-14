@@ -1,3 +1,6 @@
+import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
+import { SiExpress, SiMongodb, SiTailwindcss, SiTypescript, SiTensorflow } from 'react-icons/si';
+
 export default function About() {
   return (
     <section
@@ -32,28 +35,28 @@ export default function About() {
               <h3 className="text-2xl font-semibold text-gray-200">My Skills</h3>
               <ul className="mt-4 grid grid-cols-2 gap-4 text-gray-400">
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>React.js
+                  <FaReact className="mr-2 text-blue-400" size={20} /> React.js
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>Node.js
+                  <FaNodeJs className="mr-2 text-green-400" size={20} /> Node.js
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>Express.js
+                  <SiExpress className="mr-2 text-gray-300" size={20} /> Express.js
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>Machine Learning
+                  <SiTensorflow className="mr-2 text-yellow-400" size={20} /> Machine Learning
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>Python
+                  <FaPython className="mr-2 text-blue-300" size={20} /> Python
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>TypeScript
+                  <SiTypescript className="mr-2 text-blue-500" size={20} /> TypeScript
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>MongoDB
+                  <SiMongodb className="mr-2 text-green-500" size={20} /> MongoDB
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2">⚡</span>Tailwind CSS
+                  <SiTailwindcss className="mr-2 text-teal-400" size={20} /> Tailwind CSS
                 </li>
               </ul>
             </div>

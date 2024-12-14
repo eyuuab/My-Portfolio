@@ -64,10 +64,10 @@ export default function About() {
         <div className="space-y-6">
           <div className="bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg">
             <p className="text-base sm:text-lg text-gray-300 mb-4 leading-relaxed">
-              Hey there! I&aspos;m Eyobed Abreham, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
+              Hey there! I&apos;m Eyobed Abreham, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
             </p>
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I&aspos;m not coding, you&aspos;ll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
+              From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I&apos;m not coding, you&apos;ll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
             </p>
           </div>
 

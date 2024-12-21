@@ -1,16 +1,15 @@
-'use client'
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { FaXTwitter, FaLinkedinIn, FaEnvelope, FaTelegram } from "react-icons/fa6";
+'use client';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { FaXTwitter, FaLinkedinIn, FaEnvelope, FaTelegram } from 'react-icons/fa6';
+
+interface FormStatus {
+  message: string;
+  type: string;
+}
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState({ message: '', type: '' });
-  const [focused, setFocused] = useState('');
-
-  interface FormStatus {
-    message: string;
-    type: string;
-  }
+  const [formStatus, setFormStatus] = useState<FormStatus>({ message: '', type: '' });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -19,10 +18,10 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { icon: FaXTwitter, href: "https://x.com/your-handle", label: "Twitter" },
-    { icon: FaLinkedinIn, href: "https://linkedin.com/in/your-linkedin", label: "LinkedIn" },
-    { icon: FaEnvelope, href: "mailto:your-email@example.com", label: "Email" },
-    { icon: FaTelegram, href: "https://t.me/your-telegram", label: "Telegram" }
+    { icon: FaXTwitter, href: 'https://x.com/your-handle', label: 'Twitter' },
+    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/your-linkedin', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:your-email@example.com', label: 'Email' },
+    { icon: FaTelegram, href: 'https://t.me/your-telegram', label: 'Telegram' }
   ];
 
   return (
@@ -65,7 +64,7 @@ export default function Contact() {
               <motion.div
                 className="group relative bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-gray-700"
                 whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: 'spring', stiffness: 300 }}
               >
                 {['name', 'email', 'message'].map((field) => (
                   <div key={field} className="mb-6 last:mb-0">
@@ -80,8 +79,6 @@ export default function Contact() {
                         id={field}
                         name={field}
                         rows={5}
-                        onFocus={() => setFocused(field)}
-                        onBlur={() => setFocused('')}
                         className="w-full p-4 bg-gray-700/50 text-white rounded-lg outline-none border border-gray-600 focus:border-rose-500 transition-all duration-300"
                         placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
                         required
@@ -91,8 +88,6 @@ export default function Contact() {
                         type={field === 'email' ? 'email' : 'text'}
                         id={field}
                         name={field}
-                        onFocus={() => setFocused(field)}
-                        onBlur={() => setFocused('')}
                         className="w-full p-4 bg-gray-700/50 text-white rounded-lg outline-none border border-gray-600 focus:border-rose-500 transition-all duration-300"
                         placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
                         required

@@ -12,12 +12,6 @@ export default function Contact() {
     type: string;
   }
 
-  interface SocialLink {
-    icon: React.ComponentType;
-    href: string;
-    label: string;
-  }
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setFormStatus({ message: 'Message sent successfully!', type: 'success' });
@@ -53,10 +47,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 to-pink-800 text-transparent bg-clip-text">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Have a question or want to work together? I'd love to hear from you.
+            Have a question or want to work together? I&apos;d love to hear from you.
           </p>
         </motion.div>
 

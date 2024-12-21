@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { motion } from 'framer-motion';
 import {
   SiNextdotjs,
@@ -15,95 +15,135 @@ import {
 
 export default function About() {
   const skills = [
-    { Icon: SiNextdotjs, color: "text-gray-100", borderColor: "hover:border-gray-300" },
-    { Icon: SiVite, color: "text-purple-400", borderColor: "hover:border-purple-400" },
-    { Icon: SiReact, color: "text-cyan-400", borderColor: "hover:border-cyan-400" },
-    { Icon: SiJavascript, color: "text-yellow-500", borderColor: "hover:border-yellow-500" },
-    { Icon: SiMongodb, color: "text-green-500", borderColor: "hover:border-green-500" },
-    { Icon: SiTailwindcss, color: "text-teal-400", borderColor: "hover:border-teal-400" },
-    { Icon: SiTypescript, color: "text-blue-600", borderColor: "hover:border-blue-600" },
-    { Icon: SiTensorflow, color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
-    { Icon: SiPytorch, color: "text-orange-400", borderColor: "hover:border-orange-400" },
-    { Icon: SiDocker, color: "text-blue-400", borderColor: "hover:border-blue-400" },
+    { Icon: SiNextdotjs, name: "Next.js", color: "text-gray-100", borderColor: "hover:border-gray-300" },
+    { Icon: SiVite, name: "Vite", color: "text-rose-400", borderColor: "hover:border-rose-400" },
+    { Icon: SiReact, name: "React", color: "text-cyan-400", borderColor: "hover:border-cyan-400" },
+    { Icon: SiJavascript, name: "JavaScript", color: "text-yellow-500", borderColor: "hover:border-yellow-500" },
+    { Icon: SiMongodb, name: "MongoDB", color: "text-green-500", borderColor: "hover:border-green-500" },
+    { Icon: SiTailwindcss, name: "Tailwind", color: "text-teal-400", borderColor: "hover:border-teal-400" },
+    { Icon: SiTypescript, name: "TypeScript", color: "text-blue-600", borderColor: "hover:border-blue-600" },
+    { Icon: SiTensorflow, name: "TensorFlow", color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
+    { Icon: SiPytorch, name: "PyTorch", color: "text-orange-400", borderColor: "hover:border-orange-400" },
+    { Icon: SiDocker, name: "Docker", color: "text-blue-400", borderColor: "hover:border-blue-400" },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
-    <section
-      id="about"
-      className="py-12 bg-gradient-to-br from-gray-900 to-gray-800 text-white font-inter"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
-          About Me
-        </h2>
+    <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Background Elements */}
+        <motion.div 
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="absolute top-20 left-10 w-72 h-72 bg-rose-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
+        </motion.div>
 
-        {/* Description */}
-        <div className="space-y-6">
-          <div className="bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg">
-            <p className="text-base sm:text-lg text-gray-300 mb-4 leading-relaxed">
-              Hey there! I&apos;m Eyobed Abreham, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
+        {/* Content */}
+        <div className="relative">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-rose-400 to-pink-400 text-transparent bg-clip-text">
+              About Me
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Transforming ideas into digital reality through code and creativity
             </p>
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
-              From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I&apos;m not coding, you&apos;ll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
-            </p>
-          </div>
+          </motion.div>
 
-          {/* Skills Showcase */}
-          <div className="mt-8">
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-200 mb-6 text-center">
-              Technologies I Work With
-            </h3>
+          {/* Main Content Grid */}
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* About Text */}
             <motion.div
-              className="flex flex-wrap justify-center gap-4 sm:gap-6 overflow-hidden"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
             >
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className={`
-                    group w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-gray-700 
-                    flex items-center justify-center transition-all duration-300
-                    hover:border-4 ${skill.borderColor}
-                    hover:shadow-2xl hover:scale-110 cursor-pointer
-                    bg-gray-800/50 backdrop-blur-sm
-                  `}
+              <div className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700/50 shadow-xl">
+                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  Hey there! I&apos;m Eyobed Abreham, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I&apos;m not coding, you&apos;ll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
+                </p>
+              </div>
+              
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/50">
+                  <h4 className="text-rose-400 text-lg font-semibold mb-2">Experience</h4>
+                  <p className="text-gray-300">3+ Years</p>
+                </div>
+                <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/50">
+                  <h4 className="text-rose-400 text-lg font-semibold mb-2">Projects</h4>
+                  <p className="text-gray-300">20+ Completed</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Skills Grid */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="relative"
+            >
+              <div className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700/50 shadow-xl">
+                <h3 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-rose-400 to-pink-400 text-transparent bg-clip-text">
+                  Technologies I Work With
+                </h3>
+                <motion.div 
+                  className="grid grid-cols-3 sm:grid-cols-4 gap-6"
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.1
+                      }
+                    }
+                  }}
                 >
-                  <skill.Icon
-                    className={`
-                      ${skill.color} transition-transform duration-300 
-                      group-hover:scale-125 group-hover:rotate-12
-                    `}
-                    size={24}
-                  />
+                  {skills.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      variants={{
+                        hidden: { y: 20, opacity: 0 },
+                        visible: { y: 0, opacity: 1 }
+                      }}
+                      whileHover={{ scale: 1.1 }}
+                      className="group flex flex-col items-center gap-2"
+                    >
+                      <div className={`
+                        w-16 h-16 rounded-xl border-2 border-gray-700 
+                        flex items-center justify-center transition-all duration-300
+                        hover:border-4 ${skill.borderColor}
+                        group-hover:shadow-lg group-hover:shadow-rose-500/10
+                        bg-gray-800/50 backdrop-blur-sm
+                      `}>
+                        <skill.Icon
+                          className={`
+                            ${skill.color} transition-transform duration-300 
+                            group-hover:scale-125
+                          `}
+                          size={28}
+                        />
+                      </div>
+                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">
+                        {skill.name}
+                      </span>
+                    </motion.div>
+                  ))}
                 </motion.div>
-              ))}
+              </div>
             </motion.div>
           </div>
         </div>

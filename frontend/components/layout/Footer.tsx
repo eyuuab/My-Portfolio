@@ -103,7 +103,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 flex items-center justify-center mb-4 md:mb-0">
-              Made with <FaHeart className="text-pink-500 mx-2" /> by Your eyobed &copy; {new Date().getFullYear()}
+              Made with <FaHeart className="text-pink-500 mx-2" /> by eyobed &copy; {new Date().getFullYear()}
             </p>
             <motion.button
               onClick={scrollToTop}

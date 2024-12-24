@@ -30,21 +30,21 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-b from-gray-900 to-black text-white">
-      {/* Decorative Top Border */}
-      <div className="h-1 bg-gradient-to-r from-gray-500 via-rose-200 to-orange-500" />
+
+      <div className="h-1 bg-gradient-to-r from-sky-100 via-sky-100 to-blue-700" />
       
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Main Footer Content */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
-          {/* Brand Section */}
+
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text">
               Eyobed A.
             </h3>
             <p className="text-gray-400 mb-4">
               Crafting digital experiences with passion and precision
             </p>
-            {/* Social Links */}
+
             <div className="flex justify-center md:justify-start space-x-4">
               {socialLinks.map((social) => (
                 <motion.a
@@ -103,7 +103,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 flex items-center justify-center mb-4 md:mb-0">
-              Made with <FaHeart className="text-pink-500 mx-2" /> by eyobed &copy; {new Date().getFullYear()}
+              Made with <FaHeart className="text-blue-500 mx-2" /> by eyobed &copy; {new Date().getFullYear()}
             </p>
             <motion.button
               onClick={scrollToTop}

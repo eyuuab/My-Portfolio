@@ -16,7 +16,7 @@ import {
 export default function About() {
   const skills = [
     { Icon: SiNextdotjs, name: "Next.js", color: "text-gray-100", borderColor: "hover:border-gray-300" },
-    { Icon: SiVite, name: "Vite", color: "text-rose-400", borderColor: "hover:border-rose-400" },
+    { Icon: SiVite, name: "Vite", color: "text-blue-400", borderColor: "hover:border-blue-400" },
     { Icon: SiReact, name: "React", color: "text-cyan-400", borderColor: "hover:border-cyan-400" },
     { Icon: SiJavascript, name: "JavaScript", color: "text-yellow-500", borderColor: "hover:border-yellow-500" },
     { Icon: SiMongodb, name: "MongoDB", color: "text-green-500", borderColor: "hover:border-green-500" },
@@ -37,7 +37,7 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="absolute top-20 left-10 w-72 h-72 bg-rose-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
         </motion.div>
 
@@ -50,7 +50,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-rose-400 to-pink-400 text-transparent bg-clip-text">
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-pink-400 text-transparent bg-clip-text">
               About Me
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -58,9 +58,9 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Main Content Grid */}
+
           <div className="grid md:grid-cols-2 gap-12">
-            {/* About Text */}
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -79,11 +79,11 @@ export default function About() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/50">
-                  <h4 className="text-rose-400 text-lg font-semibold mb-2">Experience</h4>
+                  <h4 className="text-blue-400 text-lg font-semibold mb-2">Experience</h4>
                   <p className="text-gray-300">3+ Years</p>
                 </div>
                 <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/50">
-                  <h4 className="text-rose-400 text-lg font-semibold mb-2">Projects</h4>
+                  <h4 className="text-blue-400 text-lg font-semibold mb-2">Projects</h4>
                   <p className="text-gray-300">20+ Completed</p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function About() {
               className="relative"
             >
               <div className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700/50 shadow-xl">
-                <h3 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-rose-400 to-pink-400 text-transparent bg-clip-text">
+                <h3 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-blue-400 to-pink-300 text-transparent bg-clip-text">
                   Technologies I Work With
                 </h3>
                 <motion.div 
@@ -126,7 +126,7 @@ export default function About() {
                         w-16 h-16 rounded-xl border-2 border-gray-700 
                         flex items-center justify-center transition-all duration-300
                         hover:border-4 ${skill.borderColor}
-                        group-hover:shadow-lg group-hover:shadow-rose-500/10
+                        group-hover:shadow-lg group-hover:shadow-blue-500/10
                         bg-gray-800/50 backdrop-blur-sm
                       `}>
                         <skill.Icon

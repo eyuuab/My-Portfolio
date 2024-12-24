@@ -45,7 +45,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 to-pink-800 text-transparent bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-pink-400 text-transparent bg-clip-text">
             Let&apos;s Connect
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -79,7 +79,7 @@ export default function Contact() {
                         id={field}
                         name={field}
                         rows={5}
-                        className="w-full p-4 bg-gray-700/50 text-white rounded-lg outline-none border border-gray-600 focus:border-rose-500 transition-all duration-300"
+                        className="w-full p-4 bg-gray-700/50 text-white rounded-lg outline-none border border-gray-600 focus:border-blue-500 transition-all duration-300"
                         placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
                         required
                       />
@@ -88,7 +88,7 @@ export default function Contact() {
                         type={field === 'email' ? 'email' : 'text'}
                         id={field}
                         name={field}
-                        className="w-full p-4 bg-gray-700/50 text-white rounded-lg outline-none border border-gray-600 focus:border-rose-500 transition-all duration-300"
+                        className="w-full p-4 bg-gray-700/50 text-white rounded-lg outline-none border border-gray-600 focus:border-blue-500 transition-all duration-300"
                         placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
                         required
                       />
@@ -100,7 +100,7 @@ export default function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 mt-6 bg-gradient-to-r from-rose-400 to-pink-400 text-white rounded-lg font-semibold shadow-lg hover:from-rose-600 hover:to-rose-700 transition-all duration-300"
+                  className="w-full py-4 mt-6 bg-gradient-to-r from-blue-400 to-blue-500 text-white rounded-lg font-semibold shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300"
                 >
                   Send Message
                 </motion.button>
@@ -127,7 +127,7 @@ export default function Contact() {
             className="w-full max-w-md"
           >
             <div className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-gray-700">
-              <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-rose-400 to-rose-500 text-transparent bg-clip-text">
+              <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-pink-300 text-transparent bg-clip-text">
                 Connect With Me
               </h3>
               <div className="grid grid-cols-2 gap-6">
@@ -143,7 +143,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
-                    <link.icon className="text-3xl mb-2 text-rose-500" />
+                    <link.icon className="text-3xl mb-2 text-blue-400" />
                     <span className="text-sm text-gray-300">{link.label}</span>
                   </motion.a>
                 ))}

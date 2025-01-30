@@ -5,4 +5,11 @@ export interface Project {
   github: string;
   demo: string;
   tags: string[];
+  keyFeatures: string[];
+  technicalChallenges: string[];
+  techStack: {
+    name: string;
+    description: string;
+  }[];
+  detailedDescription?: string;
 }

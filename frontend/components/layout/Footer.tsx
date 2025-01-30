@@ -15,10 +15,10 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/yourusername", label: "GitHub" },
-    { icon: FaLinkedinIn, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: FaTwitter, href: "https://twitter.com/yourusername", label: "Twitter" },
-    { icon: FaInstagram, href: "https://instagram.com/yourusername", label: "Instagram" }
+    { icon: FaGithub, href: "https://github.com/eyuuab", label: "GitHub" },
+    { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/eyobed-abreham-30577a262/", label: "LinkedIn" },
+    { icon: FaTwitter, href: "https://x.com/EyobedAB", label: "Twitter" },
+    { icon: FaInstagram, href: "https://www.instagram.com/eyu_ab0/", label: "Instagram" }
   ];
 
   const footerLinks = [

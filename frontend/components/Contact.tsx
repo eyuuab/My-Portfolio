@@ -18,10 +18,10 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { icon: FaXTwitter, href: 'https://x.com/your-handle', label: 'Twitter' },
-    { icon: FaLinkedinIn, href: 'https://linkedin.com/in/your-linkedin', label: 'LinkedIn' },
-    { icon: FaEnvelope, href: 'mailto:your-email@example.com', label: 'Email' },
-    { icon: FaTelegram, href: 'https://t.me/your-telegram', label: 'Telegram' }
+    { icon: FaXTwitter, href: 'https://x.com/EyobedAB', label: 'Twitter' },
+    { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/eyobed-abreham-30577a262/', label: 'LinkedIn' },
+    { icon: FaEnvelope, href: 'mailto:eyobedabreham9@gmail.com', label: 'Email' },
+    { icon: FaTelegram, href: 'https://t.me/eab01', label: 'Telegram' }
   ];
 
   return (

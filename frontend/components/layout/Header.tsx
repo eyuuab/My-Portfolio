@@ -20,19 +20,19 @@ export default function Header() {
   return (
     <header className="bg-gray-900 text-white p-4 fixed w-full top-0 z-50">
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12">
-        {/* Logo Section */}
+        
         <div className="flex items-center gap-2">
           <Link href="#home" className={`${linkStyles} flex items-center`}>
             <Paintbrush
               className="text-indigo-400"
-              size={24} // Adjusted for better visibility
+              size={24} 
               strokeWidth={2}
             />
             <span className="text-lg md:text-2xl font-bold">Eyu.</span>
           </Link>
         </div>
 
-        {/* Desktop Navigation Links */}
+        
         <ul className="hidden md:flex space-x-8 text-lg">
           <li>
             <Link href="#about" className={linkStyles}>
@@ -51,7 +51,7 @@ export default function Header() {
           </li>
         </ul>
 
-        {/* Mobile Menu Toggle Button */}
+        
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
@@ -63,7 +63,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
+      
       {isMenuOpen && (
         <div className="md:hidden bg-gray-800 text-white absolute top-16 left-0 w-full p-6 shadow-lg">
           <ul className="space-y-6 text-center text-xl">

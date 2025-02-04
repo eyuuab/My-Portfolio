@@ -25,7 +25,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-16 px-6 relative overflow-hidden">
+    <section id="contact" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-16 px-6 relative overflow-hidden">
       <div className="absolute inset-0">
         <motion.div
           initial={{ opacity: 0.1 }}
